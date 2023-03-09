@@ -1,5 +1,5 @@
 import java.util.*;
-class Sumn
+class Leng
 {
 	private int n;
 public void set(int n)
@@ -9,27 +9,31 @@ public int get()
 	{
 	return n;
     }//get
-public int digit()
+public int length()
 {
-	int sum=0;
+	if (n<0) n=-n;
+	if (n==0)
+		return 1;
+	int len=0;
 	while(n>0)
-	{sum=sum+n%10;
-   n=n/10;
+	{
+		n=n/10;
+		len++;
 		}//while
-		return sum;
+		return len;
 }//digit
-}//sumn
-class SumDigits
+}
+class Length
 {
 	public static void main(String[] args)
 	{Scanner sc=new Scanner(System.in);
 	int n1;
 	System.out.print("Enter the Digit: ");
 	n1=sc.nextInt();
-	Sumn s=new Sumn();
-	s.set(n1);
-	int res=s.digit();
-	int x=s.get();
-      System.out.println("The sum of Given Digits  is "+res);
+	Leng l=new Leng();
+	l.set(n1);
+	int res=l.length();
+	int x=l.get();
+      System.out.println("The Length of Given Digits  is "+res);
 		}//main
 }//sum

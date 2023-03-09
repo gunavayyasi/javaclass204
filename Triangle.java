@@ -3,14 +3,9 @@ class Tri
 double base;
 double height;
 public Tri()
-{
-base=height=0;
-}
+{base=height=0;}
 public Tri(double b,double h)
-	{
-	base=b;
-height=h;
-	}
+	{base=b;height=h;}
 	public void area()
 	{
 		double area=1/2f*base*height;

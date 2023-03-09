@@ -19,17 +19,27 @@ public int digit()
 		return sum;
 }//digit
 }//sumn
-class SumDigits
+class SumArray
 {
 	public static void main(String[] args)
 	{Scanner sc=new Scanner(System.in);
 	int n1;
 	System.out.print("Enter the Digit: ");
 	n1=sc.nextInt();
+	int[] ar=new int[n1];
+	int[] sum=new int[n1];
+	System.out.println("Enter numbers:");
+	for (int i=0;i<n1;i++)
+	{
+		ar[i]=sc.nextInt();
+	}
 	Sumn s=new Sumn();
-	s.set(n1);
-	int res=s.digit();
-	int x=s.get();
-      System.out.println("The sum of Given Digits  is "+res);
+	for (int i=0;i<n1;i++)
+	{
+		s.set(ar[i]);
+		int res=s.digit();
+	
+      System.out.println("The sum of Given Digits is "+res);
+	}
 		}//main
-}//sum
+}//sumarray
